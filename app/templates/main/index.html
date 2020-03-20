@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block main %}
+<article>
+  <header>
+    <div class="enjoy-css">COVID19
+    </div>
+  </header>
+  <main class="">
+    <span class="latest-stat"><i></u><u>LATEST STATS as on {{ report_date }}</i></u></span>
+    <br>
+    <span>Total Cases: {{ data["summary"]["total"] }}</span>
+    <br>
+    <span style="color: green;">Total Cured: {{ data["summary"]["discharged"] }}</span>
+    <br>
+    <span style="color: rgb(151, 24, 24);">Total Deaths: {{ data["summary"]["deaths"] }}</span>
+     <br><br>   
+    <table id="example" class="display" style="width:100%" >
+      <thead>
+          <tr>
+              <th>State</th>
+              <th>Cases</th>
+              <th>Dead</th>
+              <th>Cured</th>
+          </tr>
+      </thead>
+      <tbody>
+        {% for i in range(data["regional"]|length) %}
+          <tr>
+              <td>{{ data["regional"][i]["loc"] }}</td>
+              <td>{{ data["regional"][i]["confirmedCasesIndian"]+data["regional"][i]["confirmedCasesForeign"] }}</td>
+              <td>{{ data["regional"][i]["deaths"] }}</td>
+              <td>{{ data["regional"][i]["discharged"] }}</td>
+          </tr>
+          {% endfor %}
+  
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>State</th>
+          <th>Cases</th>
+          <th>Dead</th>
+          <th>Cured</th>
+      </tr>
+      </tfoot>
+  </table>
+  </main>
+  <footer>
+    <button id="btnAdd">Install App</button>
+  </footer>
+</article>
+{% endblock %}

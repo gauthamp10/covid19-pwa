@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ title }}</title>
+  <meta name="description" content="A PWA Project">
+  <meta name="author" content="Gautham Prakash">
+  <meta name="theme-color" content="transparent">
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="transparent">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/icons/icon-152x152.png') }}">
+
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+ 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+  <script type="text/javascript" script-name="carter-one" src="https://use.edgefonts.net/carter-one.js"></script>
+  <script type="text/javascript" script-name="ceviche-one" src="https://use.edgefonts.net/ceviche-one.js"></script>
+  <script type="text/javascript" script-name="cabin-sketch" src="https://use.edgefonts.net/cabin-sketch.js"></script>
+  <script type="text/javascript" script-name="concert-one" src="https://use.edgefonts.net/concert-one.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('#example').DataTable();
+} );
+</script>
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/styletable.css') }}">
+</head>
+<style>
+body {
+  background-image: url("{{ url_for('static', filename='images/patt.jpg') }}");
+  background-color: #cccccc;
+
+ }
+</style>
+<body>
+
+  {% block body %}{% endblock %}
+
+  <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
