@@ -5,7 +5,7 @@ Live at: [coronanews](https://coronanews.herokuapp.com/)
 
 ![Webpage](https://imgur.com/C61sgUu.png)
 
-API Credits: Amod Malviya
+API Credits: [Amod Malviya](https://www.linkedin.com/in/amodm/)
 
 ### Author
 
