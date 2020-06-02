@@ -1,6 +1,8 @@
 # covid19-pwa
 A COVID19 stats webapp
 
+![visitors](https://visitor-badge.glitch.me/badge?page_id=gauthamp10.covid19-pwa)
+
 Live at: [coronanews](https://coronanews.herokuapp.com/)
 
 ![Webpage](https://imgur.com/C61sgUu.png)
